@@ -12,13 +12,14 @@ class ShopRepository extends AbstractRepository
 {
     /**
      * @return Shop
+     *
      * @throws ShoploException
      */
     public function getShop()
     {
         try {
             $json = $this->client->send('shop', HttpClientInterface::HTTP_GET);
-            $unserialized = $this->serializer->unserialize($json, GetShopResponse::class);            
+            $unserialized = $this->serializer->unserialize($json, GetShopResponse::class);
         } catch (\Exception $exception) {
             throw new ShoploException();
         }

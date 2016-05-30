@@ -12,7 +12,9 @@ interface HttpClientInterface
     /**
      * @param $location
      * @param $method
+     *
      * @return string
+     *
      * @throws ClientException
      */
     public function send($location, $method);

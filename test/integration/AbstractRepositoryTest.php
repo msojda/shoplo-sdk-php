@@ -22,14 +22,14 @@ abstract class AbstractRepositoryTest extends \PHPUnit_Framework_TestCase
     {
         \Doctrine\Common\Annotations\AnnotationRegistry::registerAutoloadNamespace(
             'JMS\Serializer\Annotation',
-            dirname(__DIR__) . '/../vendor/jms/serializer/src'
+            dirname(__DIR__).'/../vendor/jms/serializer/src'
         );
 
         $credentials = [
             'consumer_key' => getenv('SHOPLO_CONSUMER_KEY'),
             'consumer_secret' => getenv('SHOPLO_CONSUMER_SECRET'),
             'token' => getenv('SHOPLO_TOKEN'),
-            'token_secret' => getenv('SHOPLO_TOKEN_SECRET')
+            'token_secret' => getenv('SHOPLO_TOKEN_SECRET'),
         ];
 
         $guzzle = GuzzleFactory::forUrlAndCredentials('http://api.shoplo.com/services/', $credentials);
