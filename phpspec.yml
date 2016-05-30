@@ -1,0 +1,6 @@
+formatter.name: pretty
+suites:
+  integrated_solution_sdk:
+    src_path: src/
+    namespace: Acedo\SDK
+    psr4_prefix: Acedo\SDK
